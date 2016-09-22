@@ -6,7 +6,15 @@
  * Made by Osman Nuri Okumus
  * Under MIT License
  */
-
+;(function (factory) {
+    if (typeof define === "function" && define.amd) {
+        // AMD模式
+        define([ "jquery" ], factory);
+    } else {
+        // 全局模式
+        factory(jQuery);
+    }
+}(function ($) {
 !function (a) {
     "use strict";
     function b() {
@@ -89,3 +97,5 @@
         return a.fn.metisMenu = f, this
     }
 }(jQuery);
+
+}));

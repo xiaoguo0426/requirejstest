@@ -4,7 +4,15 @@
  *   version 2.2
  *
  */
-
+;(function (factory) {
+    if (typeof define === "function" && define.amd) {
+        // AMD模式
+        define([ "jquery" ], factory);
+    } else {
+        // 全局模式
+        factory(jQuery);
+    }
+}(function ($) {
 
 $(document).ready(function () {
 
@@ -276,3 +284,4 @@ function WinMove() {
 }
 
 
+}));
